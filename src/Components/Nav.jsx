@@ -20,13 +20,10 @@ const Nav = () => {
         </a>
         <ul className=" flex justify-center items-center gap-16 max-lg:hidden">
           {navLinks.map((link, index) => (
-            <li
-              key={index}
-              className="hover:bg-red-400 py-2 px-4  rounded-lg text-slate-gray hover:text-white"
-            >
+            <li key={index} className="">
               <a
                 href={link.href}
-                className="font-montserrat leading-normal text-lg"
+                className="font-montserrat leading-normal text-lg hover:bg-red-400 py-2 px-4  rounded-lg text-slate-gray hover:text-white"
               >
                 {link.label}
               </a>
@@ -50,13 +47,10 @@ const Nav = () => {
       >
         <ul className="flex flex-col justify-center items-center gap-8">
           {navLinks.map((link, index) => (
-            <li
-              key={index}
-              className="hover:bg-red-400 py-2 px-4 hover:font-bold rounded-lg text-slate-gray hover:text-white"
-            >
+            <li key={index} className="">
               <a
                 href={link.href}
-                className="font-montserrat leading-normal text-lg "
+                className="font-montserrat leading-normal text-lg hover:bg-red-400 py-2 px-4  rounded-lg text-slate-gray hover:text-white"
               >
                 {link.label}
               </a>

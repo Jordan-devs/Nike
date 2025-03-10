@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Button from "./Button";
+import Button from "../Components/Button";
 import { arrowRight } from "../assets/icons";
 import { shoes, statistics } from "../Constants";
 import { bigShoe1 } from "../assets/images";
-import ShoeCard from "./ShoeCard";
+import ShoeCard from "../Components/ShoeCard";
 
 const Hero = () => {
   const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
@@ -17,7 +17,7 @@ const Hero = () => {
         <p className="text-xl font-montserrat text-coral-red">
           Our Summer Collection
         </p>
-        <h1 className="text-8xl font-bold max-sm:text-[72px] max-sm:leading-[82px] max-sm:mt-6 mt-10">
+        <h1 className="font-poppins text-8xl font-bold max-sm:text-[72px] max-sm:leading-[82px] max-sm:mt-6 mt-10">
           <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">
             The New Arrival
           </span>
@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="flex justify-start items-start w-full flex-wrap gap-16 mt-20">
           {statistics.map((stat, index) => (
             <div key={index}>
-              <p className="font-palanquin text-4xl font-extrabold">
+              <p className="font-poppins text-4xl font-extrabold">
                 {stat.value}
               </p>
               <p className="font-montserrat leading-7 text-slate-gray">

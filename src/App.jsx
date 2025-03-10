@@ -1,13 +1,15 @@
 import React from "react";
 import Nav from "./Components/Nav";
-import Hero from "./Components/Hero";
-import PopularProduct from "./Components/PopularProduct";
-import SpecialOffer from "./Components/SpecialOffer";
-import SuperQuality from "./Components/SuperQuality";
-import Services from "./Components/Services";
-import Subscribe from "./Components/Subscribe";
-import Footer from "./Components/Footer";
-import CustomersReview from "./Components/CustomersReview";
+import {
+  Hero,
+  PopularProduct,
+  SuperQuality,
+  Services,
+  SpecialOffer,
+  Subscribe,
+  CustomersReview,
+  Footer,
+} from "./Sections";
 
 const App = () => {
   return (

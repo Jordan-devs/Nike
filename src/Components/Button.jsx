@@ -5,7 +5,9 @@ const Button = ({ label, iconURL }) => {
     <button className="flex justify-center items-center gap-2 px-7 py-4 font-montserrat text-lg bg-coral-red rounded-full text-white border-coral-red cursor-pointer">
       {label}
 
-      <img src={iconURL} alt={label} className="ml-2 rounded-full w-5 h-5" />
+      {iconURL && (
+        <img src={iconURL} alt={label} className="ml-2 rounded-full w-5 h-5" />
+      )}
     </button>
   );
 };
