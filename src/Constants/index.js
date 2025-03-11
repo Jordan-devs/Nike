@@ -1,3 +1,4 @@
+import { FaGithub } from "react-icons/fa";
 import {
   facebook,
   instagram,
@@ -138,7 +139,7 @@ export const footerLinks = [
     title: "Get in touch",
     links: [
       { name: "customer@nike.com", link: "mailto:customer@nike.com" },
-      { name: "+92554862354", link: "tel:+92554862354" },
+      { name: "+2349120860508", link: "tel:+2349120860508" },
     ],
   },
 ];
