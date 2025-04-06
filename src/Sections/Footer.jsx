@@ -3,11 +3,29 @@ import { footerLogo } from "../assets/images";
 import { footerLinks, socialMedia } from "../Constants";
 import { copyrightSign } from "../assets/icons";
 import { FaGithub, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Footer = () => {
+  const upVariant = {
+    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  const downVariant = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <footer className="max-container">
-      <div className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
+      <motion.div
+        variants={upVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col"
+      >
         <div className="flex flex-col items-start">
           <a href="/">
             <img src={footerLogo} alt="logo" width={150} height={46} />
@@ -47,9 +65,16 @@ const Footer = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
-      <div className="flex justify-around text-white-400 mt-24 max-md:flex-col max-md:items-center gap-5">
+      <motion.div
+        variants={downVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        className="flex justify-between text-white-400 mt-6 pb-5 pt-30 max-md:flex-col max-md:items-center gap-5"
+      >
         <div className="flex flex-1 justify-start items-center gap-2 font-poppins cursor-pointer">
           <img
             src={copyrightSign}
@@ -90,7 +115,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="font-poppins cursor-pointer">Made with 💖 by olacodes.</p>
-      </div>
+      </motion.div>
     </footer>
   );
 };

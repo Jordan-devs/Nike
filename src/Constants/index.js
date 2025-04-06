@@ -98,18 +98,46 @@ export const services = [
 
 export const reviews = [
   {
-    imgURL: customer1,
-    customerName: "Morich Brown",
-    rating: 4.5,
-    feedback:
-      "The attention to detail and the quality of the product exceeded my expectations. Highly recommended!",
+    id: "1",
+    customerName: "Sarah Johnson",
+    feedback: "This product transformed our workflow completely.",
+    imgURL: "https://randomuser.me/api/portraits/women/32.jpg",
+    rating: 5,
   },
   {
-    imgURL: customer2,
-    customerName: "Lota Mongeskar",
-    rating: 4.5,
-    feedback:
-      "The product not only met but exceeded my expectations. I'll definitely be a returning customer!",
+    id: "2",
+    customerName: "Michael Chen",
+    feedback: "Excellent solution with great performance metrics.",
+    imgURL: "https://randomuser.me/api/portraits/men/45.jpg",
+    rating: 4,
+  },
+  {
+    id: "3",
+    customerName: "Emily Rodriguez",
+    feedback: "Our design process became much more efficient.",
+    imgURL: "https://randomuser.me/api/portraits/women/63.jpg",
+    rating: 5,
+  },
+  {
+    id: "4",
+    customerName: "David Wilson",
+    feedback: "Reduced our development time significantly.",
+    imgURL: "https://randomuser.me/api/portraits/men/22.jpg",
+    rating: 5,
+  },
+  {
+    id: "5",
+    customerName: "Jessica Kim",
+    feedback: "Perfect solution for our growing startup.",
+    imgURL: "https://randomuser.me/api/portraits/women/44.jpg",
+    rating: 4,
+  },
+  {
+    id: "6",
+    customerName: "Robert Taylor",
+    feedback: "The security features are outstanding.",
+    imgURL: "https://randomuser.me/api/portraits/men/68.jpg",
+    rating: 5,
   },
 ];
 

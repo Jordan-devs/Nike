@@ -13,7 +13,7 @@ import {
 
 const App = () => {
   return (
-    <main className="relative">
+    <main className="relative overflow-hidden">
       <Nav />
       <section className="xl:pl-16 wide:padding-r padding-b">
         <Hero />
