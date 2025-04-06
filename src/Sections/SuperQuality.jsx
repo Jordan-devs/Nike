@@ -1,14 +1,31 @@
 import React from "react";
 import Button from "../Components/Button";
+import { motion } from "framer-motion";
 import { shoe8 } from "../assets/images";
 
 const SuperQuality = () => {
+  const leftVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const rightVariants = {
+    hidden: { opacity: 0, x: 100, scale: 0.8 },
+    visible: { opacity: 1, x: 0, scale: 1 },
+  };
+
   return (
     <section
       id="about-us"
       className="scroll flex justify-between items-center max-lg:flex-col gap-10 w-full max-container"
     >
-      <div className="flex flex-1 flex-col max-lg:w-full">
+      <motion.div
+        variants={leftVariants}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="flex flex-1 flex-col max-lg:w-full"
+      >
         <h2 className="font-poppins text-4xl font-bold capitalize lg:max-w-lg leading-[58px]">
           We Provide You
           <span className="text-coral-red"> Super</span>{" "}
@@ -28,9 +45,15 @@ const SuperQuality = () => {
         <div className="mt-11">
           <Button label="View details" />
         </div>
-      </div>
+      </motion.div>
 
-      <div className="flex-1 flex justify-center items-center">
+      <motion.div
+        variants={rightVariants}
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="flex-1 flex justify-center items-center"
+      >
         <img
           src={shoe8}
           alt="shoe 8"
@@ -38,7 +61,7 @@ const SuperQuality = () => {
           height={522}
           className="object-contain"
         />
-      </div>
+      </motion.div>
     </section>
   );
 };
